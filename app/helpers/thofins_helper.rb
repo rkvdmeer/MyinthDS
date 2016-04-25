@@ -1,0 +1,2 @@
+module ThofinsHelper
+end

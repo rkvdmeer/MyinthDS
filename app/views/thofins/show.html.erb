@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @thofin.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @thofin.description %>
+</p>
+
+<%= link_to 'Edit', edit_thofin_path(@thofin) %> |
+<%= link_to 'Back', thofins_path %>

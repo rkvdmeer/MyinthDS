@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Thofins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @thofins.each do |thofin| %>
+      <tr>
+        <td><%= thofin.name %></td>
+        <td><%= thofin.description %></td>
+        <td><%= link_to 'Show', thofin %></td>
+        <td><%= link_to 'Edit', edit_thofin_path(thofin) %></td>
+        <td><%= link_to 'Destroy', thofin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Thofin', new_thofin_path %>
