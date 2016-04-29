@@ -16,9 +16,9 @@
       <tr>
         <td><%= thofin.name %></td>
         <td><%= thofin.description %></td>
-        <td><%= link_to 'Show', thofin %></td>
-        <td><%= link_to 'Edit', edit_thofin_path(thofin) %></td>
-        <td><%= link_to 'Destroy', thofin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', thofin, class: 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Edit', edit_thofin_path(thofin), class: 'btn btn-info btn-xs' %></td>
+        <td><%= link_to 'Destroy', thofin, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,6 @@
 
 <br>
 
-<%= link_to 'New Thofin', new_thofin_path %>
+<%= link_to new_thofin_path, class: 'btn btn-success' do %>
+  <i class="glyphicon glyphicon-plus"></i> New Thofin
+<% end %>

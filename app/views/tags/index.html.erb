@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><%= link_to 'View list', tags_path %></li>
+  <li><%= link_to 'New tag', new_tag_path %></li>
+</ul>
+
 <h1>Listing Tags</h1>
 
 <table>
@@ -14,9 +19,9 @@
     <% @tags.each do |tag| %>
       <tr>
         <td><%= tag.name %></td>
-        <td><%= link_to 'Show', tag %></td>
-        <td><%= link_to 'Edit', edit_tag_path(tag) %></td>
-        <td><%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', tag, class: 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Edit', edit_tag_path(tag), class: 'btn btn-info btn-xs' %></td>
+        <td><%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +29,7 @@
 
 <br>
 
-<%= link_to 'New Tag', new_tag_path %>
+<%= link_to new_tag_path, class: 'btn btn-success' do %>
+  <i class="glyphicon glyphicon-plus"></i> New Tag
+<% end %>
+
